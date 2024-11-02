@@ -1,0 +1,48 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.72.0">
+  <title>Team</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="container mx-auto">  
+   {% include "header.html" %}
+     
+    <main class="h-screen">
+        <Section class="mt-14">
+
+            <div class="mx-auto">
+                <div class="text-4xl justify-center flex items-center italic font-serif font-semibold my-20" data-aos="zoom-in-up">Team</div>
+                <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 ">
+                    {% for Members in  Team_Data %}
+                    <div data-aos="zoom-in-up" class="mx-auto h-fit w-60 p-2 rounded-lg items-center shadow-md border-2 border-orange-500 justify-center flex flex-col bg-orange-400">
+                        <img class="rounded-lg" src="/media/{{Members.Profile_Image}}" alt="">
+                        <span class="text-2xl italic font-bold font-serif pt-7 pb-2">{{Members.Name}}</span>
+                        <span class="text-2xl italic font-bold font-serif py-2">{{Members.Role}}</span>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            
+
+            </div>
+
+        </Section>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </main>
+</body>
+
+</html>

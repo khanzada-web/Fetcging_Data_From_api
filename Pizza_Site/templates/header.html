@@ -1,0 +1,20 @@
+{% load static %}
+
+<header class="container mx-auto w-full sticky shadow-sm top-0 z-20 bg-orange-300 text-black">
+    <nav class=" container mx-auto justify-between flex px-10 items-center py-6">
+        <div class="text-2xl"><a class="italic font-serif font-bold" href="#">Ordinal Pizza OG</a></div>
+        <div class=""><ul class="flex">
+            <li class="font-semibold px-4"><a href="{% url "Index" %}" class="italic font-mono">HOME</a></li>
+            <li class="font-semibold px-4"><a href="{% url "Team" %}" class="italic font-mono">TEAM</a></li>
+            <li class="font-semibold px-4"><a href="{% url "Faq" %}" class="italic font-mono">FAQ</a></li>
+            <li class="font-semibold px-4"><a href="{% url "Collection" %}" class="italic font-mono">COLLECTION</a></li>
+           
+        </ul>
+        </div>
+        <divc class="flex">
+            <a href="https://magiceden.io/ordinals/marketplace/ordinal-pizza-og?status=%22magic_eden%22" target="_blank" rel="noopener noreferrer" class="px-4"><img src={% static "/images/me.png" %} alt="Image" class="h-8"></a>
+            <a href="https://x.com/ordinalpizzaog?s=21&t=aiJEMHwPXxaO3ATuA9fHnQ" target="_blank" rel="noopener noreferrer" class="px-4"><img src={% static "/images/discord.png" %} alt="Image" class="h-9"></a>
+            <a href="https://discord.gg/3PMU3gSb" target="_blank" rel="noopener noreferrer" class="px-4"><img src={% static "/images/twitter.png" %} alt="Image" class="h-8"></a>
+        </div>
+    </nav>
+</header>
